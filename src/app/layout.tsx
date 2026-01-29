@@ -2,17 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FaceTest.fun — Fun AI Face Tests",
+  title: "FaceTest — Fun AI Face Tests",
   description: "Discover your animal face, celebrity twin, and more with AI-powered face analysis. Fun viral tests for everyone!",
   keywords: ["face test", "animal face", "celebrity lookalike", "AI face analysis", "viral test"],
+  metadataBase: new URL("https://facetest.aiactive.net"),
   openGraph: {
-    title: "FaceTest.fun — Fun AI Face Tests",
+    title: "FaceTest — Fun AI Face Tests",
     description: "What animal do you look like? Find out with AI!",
     type: "website",
+    url: "https://facetest.aiactive.net",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FaceTest.fun — Fun AI Face Tests",
+    title: "FaceTest — Fun AI Face Tests",
     description: "What animal do you look like? Find out with AI!",
   },
 };

@@ -47,7 +47,7 @@ export default function HomePage() {
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-2xl group-hover:scale-110 transition-transform">🎭</span>
             <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              FaceTest.fun
+              FaceTest
             </span>
           </Link>
         </div>
@@ -143,7 +143,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-white/5">
         <div className="max-w-4xl mx-auto text-center text-sm text-slate-500">
-          <p>© 2026 FaceTest.fun — For entertainment only.</p>
+          <p>© 2026 FaceTest — For entertainment only.</p>
           <p className="mt-2">
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy</Link>
             <span className="mx-2">·</span>
