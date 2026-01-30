@@ -16,7 +16,6 @@ const tests = [
     description: "AI guesses your age",
     gradient: "from-cyan-500 to-blue-500",
     bgGlow: "bg-cyan-500/20",
-    comingSoon: true,
   },
   {
     href: "/celebrity",
