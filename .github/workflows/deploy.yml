@@ -116,5 +116,5 @@ jobs:
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
             cd ~/facetest
             docker compose ps
-            curl -sf http://localhost:3001 > /dev/null && echo "✅ 헬스체크 성공!" || echo "⚠️ 헬스체크 실패"
+            curl -sf http://localhost:3002 > /dev/null && echo "✅ 헬스체크 성공!" || echo "⚠️ 헬스체크 실패"
           EOF

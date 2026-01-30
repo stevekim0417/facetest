@@ -3,8 +3,8 @@ services:
     image: ghcr.io/stevekim0417/facetest:latest
     container_name: facetest
     restart: unless-stopped
-    expose:
-      - "3000"
+    ports:
+      - "3002:3000"
     environment:
       - NODE_ENV=production
       - GEMINI_API_KEY=${GEMINI_API_KEY}
