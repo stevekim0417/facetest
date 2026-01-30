@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { animalFaces, AnimalFace } from "@/data/animal-faces";
+import ShareResultCard from "@/components/ShareResultCard";
 
 interface AnimalResult {
   mainMatch: {
@@ -272,6 +273,21 @@ export default function AnimalFacePage() {
               </div>
             )}
 
+            {/* Share Result Card */}
+            <div className="mb-6">
+              <h3 className="text-center text-white font-semibold mb-4">
+                📱 Share Your Result!
+              </h3>
+              <ShareResultCard
+                userImage={image!}
+                animalEmoji={result.mainMatch.animal.emoji}
+                animalName={result.mainMatch.animal.name}
+                animalNameKo={result.mainMatch.animal.nameKo}
+                similarity={result.mainMatch.similarity}
+                funComment={result.funComment}
+              />
+            </div>
+
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-3">
               <button
@@ -286,15 +302,6 @@ export default function AnimalFacePage() {
               >
                 🎭 More Tests
               </Link>
-            </div>
-
-            {/* Share */}
-            <div className="mt-6 p-5 rounded-2xl bg-gradient-to-r from-amber-900/20 to-orange-900/20 border border-amber-500/20 text-center">
-              <div className="text-2xl mb-2">📱</div>
-              <p className="text-white font-semibold mb-1">Share Your Result!</p>
-              <p className="text-slate-400 text-sm">
-                Screenshot and share with friends — compare your animal twins! 🐾
-              </p>
             </div>
           </div>
         </section>
@@ -329,6 +336,15 @@ export default function AnimalFacePage() {
       <footer className="py-8 px-4 border-t border-white/5 mt-8">
         <div className="max-w-4xl mx-auto text-center text-sm text-slate-500">
           <p>© 2026 FaceTest — For entertainment only.</p>
+          <p className="mt-2">
+            <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy</Link>
+            <span className="mx-2">·</span>
+            <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms</Link>
+            <span className="mx-2">·</span>
+            <Link href="/about" className="hover:text-slate-300 transition-colors">About</Link>
+            <span className="mx-2">·</span>
+            <Link href="/contact" className="hover:text-slate-300 transition-colors">Contact</Link>
+          </p>
         </div>
       </footer>
     </main>

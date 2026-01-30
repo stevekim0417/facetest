@@ -148,6 +148,10 @@ export default function HomePage() {
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">Privacy</Link>
             <span className="mx-2">·</span>
             <Link href="/terms" className="hover:text-slate-300 transition-colors">Terms</Link>
+            <span className="mx-2">·</span>
+            <Link href="/about" className="hover:text-slate-300 transition-colors">About</Link>
+            <span className="mx-2">·</span>
+            <Link href="/contact" className="hover:text-slate-300 transition-colors">Contact</Link>
           </p>
         </div>
       </footer>
