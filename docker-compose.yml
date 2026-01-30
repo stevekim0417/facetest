@@ -1,0 +1,22 @@
+services:
+  facetest:
+    image: ghcr.io/stevekim0417/facetest:latest
+    container_name: facetest
+    restart: unless-stopped
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - elk-network
+
+networks:
+  elk-network:
+    external: true
